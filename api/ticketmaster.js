@@ -23,7 +23,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = (req, res) => {
     const proxy = createProxyMiddleware({
-        target: 'https://app.ticketmaster.com',
+        target: 'https://app.ticketmaster.com/discovery/v2/events.json?',
         changeOrigin: true,
         pathRewrite: {
             '^/api/ticketmaster': '',
